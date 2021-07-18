@@ -1,12 +1,16 @@
 // This is HeroSection component, Main top section of website
 
 import styled, { keyframes } from "styled-components";
-
+import React, { lazy } from "react";
 import pinkBlob from "../../assets/blobPink.png";
 import purpleBlob from "../../assets/blob purple.png";
 import whiteBlob from "../../assets/blob white.png";
 import arrow from "../../assets/Arrow Right.svg";
 import Mobile from "../../assets/mobile.svg";
+import Hero from "../../assets/hero.png";
+import TypeWriter from "react-typewriter";
+
+// const Hero = lazy(() => import("../../assets/hero.png"));
 
 const move = keyframes`
 0% { transform: translateY(-5px)  }
@@ -64,7 +68,7 @@ const MainContent = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 70vw;
+  width: 90vw;
   @media only Screen and (max-width: 48em) {
     flex-direction: column;
     justify-content: center;
@@ -75,7 +79,7 @@ const MainContent = styled.div`
 
 const MobileSvg = styled.img`
   max-width: 100%;
-  width: calc(30% + 20vw);
+  width: calc(20% + 20vw);
   height: auto;
   z-index: 7;
   animation: ${move} 2.5s ease infinite;
@@ -177,34 +181,34 @@ const HeroSection = () => {
     <HomeSection id="home">
       <Blobs>
         <PinkBlob>
-          <img src={pinkBlob} alt="" width="400" height="400" />{" "}
+          {/* <img src={pinkBlob} alt="" width="400" height="400" />{" "} */}
         </PinkBlob>
-        <WhiteBlob>
-          <img src={whiteBlob} alt="" width="400" height="400" />
-        </WhiteBlob>
         <PurpleBlob>
           <img src={purpleBlob} alt="" width="400" height="400" />
         </PurpleBlob>
+        <WhiteBlob>
+          <img src={whiteBlob} alt="" width="400" height="400" />
+        </WhiteBlob>
       </Blobs>
 
       <MainContent id="home">
         <Lb id="leftBlock">
           <Topic>
             <Circle />
-            <span>We Build Web</span>
+            <span>Front End Developer</span>
           </Topic>
-          <Title>Transforming your digital presence</Title>
-          <SubText>
-            we help fast growing companies build award winning websites
-          </SubText>
-          <CTA>
+          <Title>
+            <TypeWriter typing={0.5}>Hi! This is Amiyanshu.</TypeWriter>
+          </Title>
+          <SubText>An undergraduate,based in India.</SubText>
+          {/* <CTA>
             Get in touch &nbsp;
             <img src={arrow} alt="cta" width="100" height="100" />
-          </CTA>
+          </CTA> */}
         </Lb>
-
         <MobileSvg
-          src={Mobile}
+          // src={Mobile}
+          src={Hero}
           alt="Mobile Svg"
           srcset=""
           width="400"

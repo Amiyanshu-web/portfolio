@@ -1,8 +1,14 @@
 import styled, { keyframes } from "styled-components";
 import wave from "../../assets/waves.svg";
 import rocket from "../../assets/rocket image.png";
+import profile from "../../assets/profile-pic (6).png";
 import human from "../../assets/human.svg";
+import me from "../../assets/me.png";
+
 import hand from "../../assets/hand.svg";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const move = keyframes`
 0% { transform: translateY(-5px)         }
@@ -53,14 +59,20 @@ const Main = styled.div`
 const Title = styled.h1`
   font-size: 2rem;
   display: inline-block;
+  position: absolute;
+  right: 40rem;
+  top: 15rem;
 `;
 
 const CurvedLine = styled.div`
   width: 7rem;
   height: 2rem;
-  border: solid 5px var(--purple);
-  border-color: var(--purple) transparent transparent transparent;
+  border: solid 5px #dd9043;
+  border-color: #dd9043 transparent transparent transparent;
   border-radius: 150%/60px 70px 0 0;
+  position: absolute;
+  right: 42rem;
+  top: 17rem;
 `;
 
 const Content = styled.div`
@@ -96,7 +108,7 @@ const Human = styled.div`
   }
 `;
 const Text = styled.h4`
-  font-size: calc(0.5rem + 1vw);
+  font-size: calc(0.3rem + 1vw);
   line-height: 1.5;
   color: var(--nav2);
 `;
@@ -117,6 +129,7 @@ const AboutText = styled.div`
   }
 `;
 
+AOS.init();
 const About = () => {
   return (
     <AboutSection id="about">
@@ -126,29 +139,30 @@ const About = () => {
       </Hand>
       <Main>
         <div>
-          <Title>About Us</Title>
+          <Title>Who Am I?</Title>
           <CurvedLine />
         </div>
         <Content>
           <Rocket>
-            <img src={rocket} alt="" width="400" height="400" />
+            {/* <img src={rocket} alt="" width="400" height="400" /> */}
+            <img src={profile} alt="" width="400" height="400" />
           </Rocket>
           <AboutText>
-            <Human>
-              <img src={human} alt="" width="400" height="400" />
-            </Human>
-
+            {/* <Human>
+              <img src={me} alt="" width="400" height="400" />
+            </Human> */}
             <Text>
-              We help our customers to tell about themselves, to grow and stand
-              out in an increasingly competitive digital world, through creative
-              projects that are able to attract and involve, creating strategic
-              value.
+              Hi there! Nice to meet you. I am Amiyanshu, a 3rd Year Engineering
+              Student at IIT(BHU), Varanasi. I like to code things from scratch,
+              and enjoy bringing ideas to life in the browser.Apart from this I
+              love creating digital artwork using Photoshop.Innovative ReactJS
+              developer with willingness to learn and explore my knowledge.
             </Text>
-            <div>
+            {/* <div>
               <Circle style={{ backgroundColor: "var(--purple)" }} />
               <Circle style={{ backgroundColor: "var(--pink)" }} />
               <Circle style={{ backgroundColor: "var(--black)" }} />
-            </div>
+            </div> */}
           </AboutText>
         </Content>
       </Main>

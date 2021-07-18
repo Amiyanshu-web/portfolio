@@ -15,7 +15,7 @@ function App() {
         <ScrollToTop />
         <Header />
         <Home />
-        <Footer />
+        {/* <Footer /> */}
       </Suspense>
     </>
   );

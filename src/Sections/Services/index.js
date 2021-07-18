@@ -6,9 +6,13 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Tube from "../../assets/3dtube.png";
 import Cone from "../../assets/3dtriangle.png";
 import Capsule from "../../assets/3dcapsule.png";
+import ev from "../../assets/ev.png";
+import amazon from "../../assets/amazon.png";
+import resume from "../../assets/resume.png";
 
 import TextBlock from "../../components/TextBlock";
 import SvgBlock from "../../components/SvgBlock";
+import { Link } from "react-router-dom";
 
 // const TextBlock = lazy(() => import("../../components/TextBlock"));
 // const SvgBlock = lazy(() => import("../../components/SvgBlock"));
@@ -112,6 +116,21 @@ const OBJ = styled.div`
 
   @media only Screen and (max-width: 48em) {
     opacity: 0.5;
+  }
+`;
+const Rb = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  position: relative;
+  /* z-index: 10; */
+  png {
+    width: 100%;
+    height: auto;
+  }
+  @media only Screen and (max-width: 48em) {
+    display: none;
   }
 `;
 
@@ -319,58 +338,68 @@ const Services = () => {
   return (
     <ServiceSection id="services">
       <Background ref={ref}>
-        <Title className="title">What We Do</Title>
+        <Title className="title">Projects</Title>
         <Line id="line" />
         <Triangle id="triangle" />
       </Background>
 
       <Content ref={addToRefs}>
         <TextBlock
-          topic="Design"
-          title={<h1>We build award winning Designs</h1>}
+          topic="E-commerce Website"
+          title={
+            <a href="https://amazon-klon.netlify.app/">
+              <h1>Amazon Clone</h1>
+            </a>
+          }
           subText={
             <h5>
-              We help clients to build great design to attract more customers
+              A fully functional E-commerce website built using react and
+              firebase{" "}
             </h5>
           }
         />
-        <OBJ>
+        {/* <OBJ>
           <img src={Tube} alt="Tube Object" width="400" height="400" />
-        </OBJ>
-        <SvgBlock svg="Design.svg" />
+        </OBJ> */}
+        {/* <SvgBlock svg="resume-website.jpg" /> */}
+        <Rb id="svgBlock">
+          <img src={amazon} alt="Az" />
+        </Rb>
       </Content>
       <Content ref={addToRefs}>
         <TextBlock
           topic="Develop"
-          title={<h1>We Develope high quality Web & App</h1>}
+          title={
+            <a href="https://ev4all.netlify.app/">
+              <h1>Ev Chat Bot</h1>
+            </a>
+          }
           subText={
-            <h5>
-              We build appropriate solution to develope your website & app with
-              best tools available
-            </h5>
+            <h5>Electric Vehicle chat Bot using react-chatbot-kit library.</h5>
           }
         />
-        <OBJ>
+        {/* <OBJ>
           <img src={Cone} alt="Cone Object" width="400" height="400" />
-        </OBJ>
-        <SvgBlock svg="Develope.svg" />
+        </OBJ> */}
+        {/* <SvgBlock svg="amazon.png" />
+         */}
+        <Rb id="svgBlock">
+          <img src={ev} alt="Electric Vehicle" />
+        </Rb>
       </Content>
       <Content>
         <TextBlock
           topic="Support"
-          title={<h1>We provide support for your digital presence</h1>}
-          subText={
-            <h5>
-              Once your system is online, we will stay on hand to help you use
-              it and provide technical support and maintenance <br /> your
-              business
-            </h5>
-          }
+          title={<h1>Portfolio</h1>}
+          subText={<h5></h5>}
         />
-        <OBJ>
+        {/* <OBJ>
           <img src={Capsule} alt="Capsule Object" width="400" height="400" />
-        </OBJ>
-        <SvgBlock svg="Support.svg" />
+        </OBJ> */}
+        {/* <SvgBlock svg="ev.png" /> */}
+        <Rb id="svgBlock">
+          <img src={resume} alt="Re" />
+        </Rb>
       </Content>
     </ServiceSection>
   );

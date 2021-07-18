@@ -1,0 +1,51 @@
+/*	Skill Bars
+/*----------------------------------------------*/
+
+.bars {
+    width:60vw;
+    float: left;
+    padding: 0;
+    text-align: left;
+}
+
+.bars .skills {
+    margin-top: 5rem;
+    list-style: none;
+}
+
+.bars li {
+    position: relative;
+    margin-bottom: 60px;
+    /* background: #ccc; */
+    background:#cbbce4;
+    height: 42px;
+    border-radius: 3px;
+}
+
+.bars li em {
+    font: 15px 'opensans-bold', sans-serif;
+    color: #313131;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: normal;
+    position: relative;
+    top: -36px;
+}
+
+.bar-expand {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    margin: 0;
+    padding-right: 24px;
+    background: #8c52eb;
+    color:white;
+    text-align: center;
+
+
+    display: inline-block;
+    height: 42px;
+    line-height: 42px;
+    border-radius: 3px 0 0 3px;
+}

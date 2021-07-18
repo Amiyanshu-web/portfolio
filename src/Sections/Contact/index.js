@@ -1,5 +1,6 @@
 import Facebook from "../../assets/facebook-square-brands.svg";
 import LinkedId from "../../assets/linkedin-brands.svg";
+import Github from "../../assets/Github.png";
 import Twitter from "../../assets/twitter-square-brands.svg";
 import Instagram from "../../assets/instagram-square-brands.svg";
 import styled from "styled-components";
@@ -130,19 +131,19 @@ const Contact = () => {
       <Title>Get in touch</Title>
       {/* <Text>Lorem ipsum dolor sit amet, consectetur adipisicing.</Text> */}
       <Icons>
-        <a href="https://www.facebook.com/">
+        {/* <a href="https://www.facebook.com/amiyanshu.kumar/">
           {" "}
           <img src={Facebook} alt="Facebook" />
-        </a>
-        <a href="https://www.linkedin.com//">
+        </a> */}
+        <a href="https://www.linkedin.com/in/amiyanshu-024818193/">
           <img src={LinkedId} alt="LinkedId" />
         </a>
-        <a href="https://twitter.com/">
-          <img src={Twitter} alt="Twitter" />
+        <a href="https://github.com/Amiyanshu-web">
+          <img src={Github} alt="Github" />
         </a>
-        <a href="https://www.instagram.com/">
+        {/* <a href="https://www.instagram.com/">
           <img src={Instagram} alt="Instagram" />
-        </a>
+        </a> */}
       </Icons>
       <Form>
         <Row>

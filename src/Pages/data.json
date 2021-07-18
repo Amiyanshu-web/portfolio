@@ -1,0 +1,54 @@
+{
+  
+  "resume": {
+    "skillmessage": "My Programming Language Proficiency",
+    
+    "skills": [
+      {
+        "name": "C",
+        "level": "75%"
+      },{
+        "name": "C++",
+        "level": "80%"
+      },
+      {
+        "name": "ReactJs",
+        "level": "85%"
+      },
+      
+      {
+        "name": "Git",
+        "level": "75%"
+      },
+      {
+        "name": "JavaScript",
+        "level": "80%"
+      },
+      {
+        "name": "Adobe Photoshop",
+        "level": "85%"
+      },{
+        "name": "Python",
+        "level": "45%"
+      }
+    ]
+  },
+  "portfolio": {
+    "projects": [
+      {
+        "title": "Amazon Clone (React JS)",
+        "category": "",
+        "image": "amazon.png",
+        "url": "https://amazon-klon.netlify.app/"
+      },
+      {
+        "title": "Ev Bot (React JS)",
+        "category": "",
+        "image": "ev.png",
+        "url": "https://ev4all.netlify.app/"
+      }
+      
+    ]
+  }
+  
+}

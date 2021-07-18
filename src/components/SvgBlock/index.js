@@ -8,7 +8,7 @@ const Rb = styled.div`
   width: 40%;
   position: relative;
   /* z-index: 10; */
-  svg {
+  png {
     width: 100%;
     height: auto;
   }
@@ -17,8 +17,8 @@ const Rb = styled.div`
   }
 `;
 
-const SvgBlock = ({ svg }) => {
-  const SvgIcon = require(`../../assets/${svg}`).default;
+const SvgBlock = ({ png }) => {
+  const SvgIcon = require(`../../assets/${png}`).default;
   //console.log(SvgIcon);
   return (
     <Rb id="svgBlock">

@@ -58,6 +58,9 @@ const Nav = styled.nav`
       width: 100%;
       background: var(--purple);
     }
+    // &:focus {
+    //   color: var(--purple);
+    // }
     /* &:not(:last-child) {
       margin-right: 2rem;
     } */
@@ -82,6 +85,7 @@ const Button = styled.button`
   }
   &:focus {
     transform: scale(0.9);
+    color: var(--purple);
   }
   @media only Screen and (max-width: 40em) {
     font-size: 1.2rem;
@@ -212,11 +216,11 @@ const Header = () => {
         top: "1rem",
         left: "3rem",
         right: "3rem",
-        padding: "1.5rem 2rem",
+        // padding: "1.5rem 2rem",
 
         borderRadius: "50px",
 
-        border: "3px solid var(--white)",
+        border: "1px solid var(--white)",
 
         duration: 1,
         ease: "power1.out",
@@ -233,22 +237,23 @@ const Header = () => {
 
   return (
     <Headers ref={ref}>
-      <Logo>
+      {/* <Logo>
         <img src={logo} alt="CodeBucks" />
         <h3>CodeBucks</h3>
-      </Logo>
+      </Logo> */}
       <Nav>
         <a href="#home" onClick={(e) => scrollUp("home", e)}>
           Home
         </a>
         <a href="#about" onClick={(e) => scrollUp("about", e)}>
-          About Us
+          About
         </a>
         <a href="#services" onClick={(e) => scrollUp("services", e)}>
-          Services
+          Projects
         </a>
+
         <a href="#contact" onClick={(e) => scrollUp("contact", e)}>
-          <Button>Contact Us</Button>
+          <Button>Contact me</Button>
         </a>
       </Nav>
       <HamburgerBtn clicked={click} onClick={() => setClick(!click)}>
@@ -259,13 +264,13 @@ const Header = () => {
           Home
         </a>
         <a href="#about" onClick={(e) => handleClick("about", e)}>
-          About Us
+          About
         </a>
         <a href="#services" onClick={(e) => handleClick("services", e)}>
-          Services
+          Projects
         </a>
         <a href="#contact" onClick={(e) => handleClick("contact", e)}>
-          <Button>Contact Us</Button>
+          <Button>Contact</Button>
         </a>
       </MobileMenu>
     </Headers>

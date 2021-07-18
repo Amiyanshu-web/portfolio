@@ -1,9 +1,11 @@
 import React, { lazy } from "react";
 import styled from "styled-components";
-
+import "./index.css";
 import Slider from "react-slick";
 import "../../../node_modules/slick-carousel/slick/slick.css";
 import "../../../node_modules/slick-carousel/slick/slick-theme.css";
+
+import { Line, Circle } from "rc-progress";
 
 const Card = lazy(() => import("../../components/Card/index"));
 
@@ -68,20 +70,62 @@ const Carousal = styled.div`
   }
 `;
 
-const Testimonials = () => {
-  const settings = {
-    dots: true,
-    infinite: true,
+const Testimonials = ({ data }) => {
+  // const settings = {
+  //   dots: true,
+  //   infinite: true,
 
-    speed: 1000,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
+  //   speed: 1000,
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  // };
+  // var skillmessage = data.skillmessage;
+  if (data) {
+    var skills = data.skills.map(function(skills) {
+      var className = "bar-expand " + skills.name.toLowerCase();
+      return (
+        <li key={skills.name}>
+          <span style={{ width: skills.level }} className={className}>
+            {/* <b>{skills.level}</b> */}
+          </span>
+          <em>{skills.name}</em>
+        </li>
+      );
+    });
+  }
 
   return (
     <Section>
-      <Title>Few good words about us!</Title>
-      <Carousal>
+      <div className="row skill">
+        <div className="three columns header-col">
+          <Title>
+            <span>Skills</span>
+          </Title>
+        </div>
+
+        <div className="nine columns main-col">
+          {/* <p>{skillmessage}</p> */}
+
+          <div className="bars">
+            <ul className="skills">{skills}</ul>
+          </div>
+        </div>
+      </div>
+
+      {/* to include if not done */}
+
+      {/* <Title>Skills!</Title>
+      <div style={{ margin: 20, width: 600, position: "absolute", left: 0, }}>
+        <h3>C++</h3>
+        <Line
+          percent="80"
+          strokeWidth="4"
+          trailWidth="4"
+          strokeColor="var(--purple)"
+        />
+      </div> */}
+
+      {/* <Carousal>
         <Slider {...settings}>
           <Card
             text="CodeBucks has been essential part of our business. I would definetly
@@ -108,7 +152,7 @@ const Testimonials = () => {
             image="avatar-4"
           />
         </Slider>
-      </Carousal>
+      </Carousal> */}
     </Section>
   );
 };
