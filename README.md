@@ -3,9 +3,8 @@
 This repository contains code for Portfolio in ReactJS.
 
 View Demo:
-https://agency-website-eta.vercel.app/
+amiyanshu.netlify.app
 
-### [ I appreciate if you give appropriate credit when using this Website for Commercial Use ]
 
 ### Resources Used in This Project
 
@@ -13,7 +12,7 @@ Design in : https://www.figma.com/ <br />
 Social Icons from :https://fontawesome.com/ <br />
 Blob Images from : https://www.figma.com/community/plugin/739208439270091369/Blobs <br />
 Svgs from : https://undraw.co/ <br />
-Logo from : https://www.figma.com/community/plugin/768094929040207895/Logo-Creator <br />
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
