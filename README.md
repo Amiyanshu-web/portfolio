@@ -1,10 +1,9 @@
-# Build Responsive Website in React JS with Styled-Components and GSAP for awesome scroll Animations
+# Portfolio
 
 This repository contains code for Portfolio in ReactJS.
 
 View Demo:
-amiyanshu.netlify.app
-
+https://amiyanshu.netlify.app/
 
 ### Resources Used in This Project
 
