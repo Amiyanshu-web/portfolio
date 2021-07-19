@@ -16,8 +16,8 @@
 .bars li {
     position: relative;
     margin-bottom: 60px;
-    /* background: #ccc; */
-    background:#cbbce4;
+    background: rgb(218, 214, 214);
+    /* background:#cbbce4; */
     height: 42px;
     border-radius: 3px;
 }

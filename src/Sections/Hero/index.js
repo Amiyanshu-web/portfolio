@@ -9,6 +9,7 @@ import arrow from "../../assets/Arrow Right.svg";
 import Mobile from "../../assets/mobile.svg";
 import Hero from "../../assets/hero.png";
 import TypeWriter from "react-typewriter";
+import Web from "../../assets/webd.svg";
 
 // const Hero = lazy(() => import("../../assets/hero.png"));
 
@@ -208,7 +209,7 @@ const HeroSection = () => {
         </Lb>
         <MobileSvg
           // src={Mobile}
-          src={Hero}
+          src={Web}
           alt="Mobile Svg"
           srcset=""
           width="400"

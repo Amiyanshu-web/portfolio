@@ -1,3 +1,5 @@
+import React, { useState } from "react";
+
 import Facebook from "../../assets/facebook-square-brands.svg";
 import LinkedId from "../../assets/linkedin-brands.svg";
 import Github from "../../assets/Github.png";
@@ -126,6 +128,22 @@ const Row = styled.div`
   }
 `;
 const Contact = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("Contact");
+  const [message, setMessage] = useState("");
+
+  var contactEmail = "amiyanshu.student.met19@iitbhu.ac.in";
+
+  const submitForm = () => {
+    window.open(
+      `mailto:${contactEmail}?subject=${encodeURIComponent(
+        subject
+      )}&body=${encodeURIComponent(name)} (${encodeURIComponent(
+        email
+      )}): ${encodeURIComponent(message)}`
+    );
+  };
   return (
     <ContactSection id="contact">
       <Title>Get in touch</Title>
@@ -147,12 +165,21 @@ const Contact = () => {
       </Icons>
       <Form>
         <Row>
-          <input name="name" type="text" placeholder="your name" />
+          <input
+            name="name"
+            type="text"
+            placeholder="your name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
           <input
             name="email"
             type="email"
+            value={email}
             placeholder="enter working email id"
+            onChange={(e) => setEmail(e.target.value)}
           />
+          <h1>Info</h1>
         </Row>
         <textarea
           name=""
@@ -160,11 +187,13 @@ const Contact = () => {
           cols="30"
           rows="2"
           placeholder="your message"
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
         ></textarea>
         <div style={{ margin: "0 auto" }}>
           <button
             onClick={(e) => {
-              e.preventDefault();
+              submitForm();
             }}
           >
             Submit
